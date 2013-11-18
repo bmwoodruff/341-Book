@@ -1,0 +1,80 @@
+\documentclass[10pt]{amsart}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+
+\usepackage{graphicx}
+\usepackage{pstricks}
+\usepackage{pst-plot}
+\usepackage{wrapfig}
+\usepackage{multicol}
+\usepackage{hyperref}
+
+\usepackage{fancyhdr}
+\pagestyle{fancyplain}
+\usepackage{lastpage}
+
+\newcommand{\mytitle}{Similar Matrices Problems}
+\newcommand{\myclass}{Math 341}
+
+\rhead{pg. \thepage  \ of \pageref{LastPage}}    
+\chead{\myclass}
+\lhead{\mytitle}
+\lfoot{\noindent(Draft \today)}
+\cfoot{}
+
+
+%The purpose of this code is to allow me to put lines in matrices so that I can create augmented matrices.
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+  \hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{#1}}
+\makeatother
+
+
+
+\newcommand{\ds}{\displaystyle}
+\begin{document}
+
+\noindent{\huge{\bf \mytitle}}
+
+
+%The following problems require the use of the Maple introduction.
+
+\begin{enumerate}
+
+\item[(I)] For each of the following linear transformations, find a basis $S$ for the domain and a basis $S^\prime$ for the range so that the matrix representation relative to $S$ and $S^\prime$ consists of all zeros and 1's, where the 1's occur on the diagonal of a sub matrix located in the upper left corner of the matrix.  In other words, the matrix representation consists of adding rows and/or columns of zeros to the identity matrix (where the number of 1's equals the rank of the matrix). [Hint: extend a basis for the kernel to a basis for the domain, and extend the images of these basis vectors to a basis for the range. See Examples 9 and 10 in the handout.]
+
+\item $T(x,y,z)=(x+2y-z,y+z)$
+
+\item $T(x,y,z)=(x+2y-z,y+z,x+3y)$
+
+\item $T(x,y,z)=(x+2y-z,2x+4y-2z)$
+
+\item $T(x,y)=(x+2y,y,3x-y)$
+
+\item $T(x,y)=(x+2y,2x+4y,3x+6y)$
+
+\item[(II)] Prove the following (which requires checking 3 things). Again, the proofs are on the first 2 pages of the handout:
+
+\item The kernel of a linear transformation is a subspace of the domain.
+
+\item The image of a linear transformation is a subspace of the range.
+
+\item The eigenspace corresponding to an eigenvalue of a linear transformation is a subspace of both the domain and range.
+
+\end{enumerate}
+
+
+
+
+
+
+\end{document}
+
+
+
+
+
+
+
